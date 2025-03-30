@@ -1,0 +1,37 @@
+/* Default (Dark Theme) */
+:root {
+  --background-color: #121212;
+  --text-color: #ffffff;
+  --card-bg: rgba(255, 255, 255, 0.05);
+  --header-gradient: linear-gradient(90deg, #ff00cc, #00ffcc);
+  --button-border: #ff00cc;
+  --button-text: #ff00cc;
+  --hover-glow: rgba(255, 0, 204, 0.5);
+}
+
+/* Light Theme */
+[data-theme="light"] {
+  --background-color: #ffffff;
+  --text-color: #000000;
+  --card-bg: rgba(255, 255, 255, 0.8);
+  --header-gradient: linear-gradient(90deg, #00ffcc, #ff00cc);
+  --button-border: #00ffcc;
+  --button-text: #00ffcc;
+  --hover-glow: rgba(0, 255, 204, 0.5);
+}
+
+/* Apply styles */
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  margin: 0;
+  font-family: Arial, sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Shine animation */
+@keyframes shine {
+  0% { transform: translateX(-100%); }
+  50% { transform: translateX(100%); }
+  100% { transform: translateX(100%); }
+}
